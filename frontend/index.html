@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✨ 许愿墙</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="bg-glow"></div>
+<main class="container">
+  <header class="header">
+    <h1>✨ 许愿墙</h1>
+    <p class="subtitle">写下你的愿望，也许明天就会实现</p>
+  </header>
+
+  <section class="card compose-card">
+    <input id="nickname" class="input" type="text" maxlength="20" placeholder="你的昵称（最多 20 字，可留空）">
+    <textarea id="content" class="textarea" maxlength="200" rows="3" placeholder="写下你的愿望或留言…（最多 200 字）"></textarea>
+    <div class="compose-footer">
+      <span id="charCount" class="char-count">0 / 200</span>
+      <button id="submitBtn" class="btn">🌟 许愿</button>
+    </div>
+  </section>
+
+  <section class="card status-card hidden" id="statusCard"></section>
+
+  <section id="list" class="list">
+    <div class="empty hidden" id="empty">还没有留言，来当第一个许愿的人吧 ✨</div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
