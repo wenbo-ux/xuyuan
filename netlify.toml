@@ -1,0 +1,11 @@
+# Netlify 部署配置
+[build]
+  publish = "frontend"
+  functions = "netlify/functions"
+
+# 把 /api/* 的请求转发给云函数（前端代码无需改动）
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
